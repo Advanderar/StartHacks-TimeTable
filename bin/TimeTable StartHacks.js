@@ -153,15 +153,15 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	// Layer 1
 	this.title = new lib.Symbol1();
 	this.title.parent = this;
-	this.title.setTransform(360.1,260.1,0.783,0.783,0,0,0,0.1,2.3);
+	this.title.setTransform(960.3,693.7,2.087,2.087,0,0,0,0.2,2.4);
 
 	this.instance = new lib.starthacksbackgroundmichellewong();
 	this.instance.parent = this;
-	this.instance.setTransform(0,0,0.141,0.141);
+	this.instance.setTransform(0,0,0.375,0.375);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance},{t:this.title}]}).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.Header, new cjs.Rectangle(0,0,720,405), null);
+}).prototype = getMCSymbolPrototype(lib.Header, new cjs.Rectangle(0,0,1920,1080), null);
 
 
 // stage content:
@@ -187,8 +187,8 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 			stage.addChild(headerC);
 			for(var i = 0; i < 16; i++){
 				var elm = new lib.Element();
-				elm.x = 0;
-				elm.y = (75 + 50) * i + 450;
+				elm.x = 500;
+				elm.y = (75 + 50) * i + 350;
 				elm.TimeTitle.text = titleA[i];
 				elm.Time.text = timeA[i];
 				elm.cache(0,-38,704,76);
@@ -198,8 +198,8 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 			}
 			header.title.scaleX = field.y/1000 + 1
 			header.title.scaleY = field.y/1000 + 1
-			header.y = (field.y/2 - 50)
-			header.title.y = (field.y/4 - 225)*-1
+			header.y = (field.y/2 - 800)
+			header.title.y = (field.y/4 - 950)*-1
 			
 			header.title.cache(-600/2,-128/2,600,128)
 			headerC.addChild(header);
@@ -207,7 +207,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 		}
 		
 		function nextFrame(){
-			if(header.title.scaleX >= 0.5 && header.title.scaleX <= 1){
+			if(header.title.scaleX >= 0.7 && header.title.scaleX <= 1){
 				
 				header.title.scaleX = field.y/1000 + 1
 				header.title.scaleY = field.y/1000 + 1
@@ -215,12 +215,12 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 					header.title.scaleX = 1
 					header.title.scaleY = 1
 				}
-				else if(header.title.scaleX < .5){
-					header.title.scaleX = .5
-					header.title.scaleY = .5
+				else if(header.title.scaleX < .7){
+					header.title.scaleX = .7
+					header.title.scaleY = .7
 				} else{
-					header.y = (field.y/2 - 50)
-					header.title.y = (field.y/4 - 225)*-1
+					header.y = (field.y/2 - 800)
+					header.title.y = (field.y/4 - 950)*-1
 				}
 				
 			}
@@ -249,16 +249,16 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	// Layer 1
 	this.shape = new cjs.Shape();
 	this.shape.graphics.f().s("#FFFFFF").ss(1,1,1).p("EAAAhj/MAAADH/");
-	this.shape.setTransform(188,360);
+	this.shape.setTransform(686,360);
 
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(547,219,2,1282);
+p.nominalBounds = new cjs.Rectangle(1645,259,2,1282);
 // library properties:
 lib.properties = {
-	width: 720,
-	height: 1000,
+	width: 1920,
+	height: 1080,
 	fps: 60,
 	color: "#4F729F",
 	opacity: 1.00,
