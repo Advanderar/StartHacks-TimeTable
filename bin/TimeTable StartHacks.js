@@ -183,6 +183,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 		function Main(){
 			console.log("Main::started");
 			
+		
 			createjs.Touch.enable(stage);
 			
 			stage.addChild(field);
@@ -194,6 +195,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 				elm.y = (75 + 50) * i + 450;
 				elm.TimeTitle.text = titleA[i];
 				elm.Time.text = timeA[i];
+				elm.cache(0,-38,704,76);
 				console.log(elm);
 				field.addChild(elm);
 				
@@ -231,7 +233,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 		});
 		field.addEventListener("pressmove", function(evt) {
 			console.log("MouseMove");
-			field.y = evt.stageY - offset;
+			field.y = (evt.stageY - offset);
 			if(field.y >0){
 				field.y = 0;
 			}else if(field.y < -1500){
