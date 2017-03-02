@@ -188,7 +188,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 			
 			stage.addChild(field);
 			stage.addChild(headerC);
-			for(var i = 0; i < 16; i++){
+			for(var i = 0; i < 5; i++){
 				console.log("running")
 				var elm = new lib.Element();
 				elm.x = 0;
