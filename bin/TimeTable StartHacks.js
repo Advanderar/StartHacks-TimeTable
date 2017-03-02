@@ -181,15 +181,11 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 		var headerC = new createjs.Container();
 		
 		function Main(){
-			console.log("Main::started");
-			field.z = 
-		
 			createjs.Touch.enable(stage);
 			
 			stage.addChild(field);
 			stage.addChild(headerC);
 			for(var i = 0; i < 16; i++){
-				console.log("running")
 				var elm = new lib.Element();
 				elm.x = 0;
 				elm.y = (75 + 50) * i + 450;
@@ -232,11 +228,9 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 		}
 		
 		field.addEventListener("mousedown", function(evt){
-			console.log("MouseDown");
 			offset = (evt.stageY/2) - field.y;
 		});
 		field.addEventListener("pressmove", function(evt) {
-			console.log("MouseMove");
 			field.y = (evt.stageY/2) - offset;
 			if(field.y >0){
 				field.y = 0;
