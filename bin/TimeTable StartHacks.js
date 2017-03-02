@@ -201,6 +201,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 				
 			}
 			header.y = -100
+			header.title.cache(-600/2,-128/2,600,128)
 			headerC.addChild(header);
 			
 			createjs.Ticker.addEventListener("tick", this.update.bind(this));
