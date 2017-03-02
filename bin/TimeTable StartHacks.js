@@ -183,6 +183,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 		function Main(){
 			console.log("Main::started");
 			
+			createjs.Touch.enable(stage);
 			
 			stage.addChild(field);
 			stage.addChild(headerC);
