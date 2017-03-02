@@ -200,14 +200,17 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 				field.addChild(elm);
 				
 			}
-			header.y = -100
+			header.title.scaleX = field.y/1000 + 1
+			header.title.scaleY = field.y/1000 + 1
+			header.y = (field.y/2 - 50)
+			header.title.y = (field.y/4 - 225)*-1
+			
 			header.title.cache(-600/2,-128/2,600,128)
 			headerC.addChild(header);
-			
-			createjs.Ticker.addEventListener("tick", this.update.bind(this));
+		
 		}
 		
-		Main.prototype.update = function(evt){
+		function nextFrame(){
 			if(header.title.scaleX >= 0.5 && header.title.scaleX <= 1){
 				
 				header.title.scaleX = field.y/1000 + 1
@@ -240,6 +243,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 			}else if(field.y < -1500){
 				field.y = -1500;
 			}
+			nextFrame();
 		});
 		
 		var main = new Main();
